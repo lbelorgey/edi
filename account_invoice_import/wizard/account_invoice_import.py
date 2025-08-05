@@ -306,6 +306,7 @@ class AccountInvoiceImport(models.TransientModel):
             "invoice_origin": parsed_inv.get("origin"),
             "ref": parsed_inv.get("invoice_number"),
             "invoice_date": parsed_inv.get("date"),
+            "date": parsed_inv.get("date"),
             "invoice_line_ids": [],
         }
         if parsed_inv["type"] in ("out_invoice", "out_refund"):
